@@ -98,7 +98,7 @@ echo ""
 #fun_attlist () {
     apt update -y
 #}
-fun_bar 'fun_attlist'
+#fun_bar 'fun_attlist'
 #clear
 echo ""
 echo -e "\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALLING PACKAGES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
@@ -111,8 +111,8 @@ for _prog in ${_pacotes[@]}; do
     apt install $_prog -y
 done
 pip install speedtest-cli
-}
-fun_bar 'inst_pct'
+#}
+#fun_bar 'inst_pct'
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
 #clear
 echo ""
