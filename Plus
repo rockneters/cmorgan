@@ -50,18 +50,7 @@ sleep 2
 IZIN=$(curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permintaan Diterima...${NC}"
-sleep 5
-
-
-#function verif_key () {
-#krm=$(echo '5:q-3gs2.o7%8:1'|rev); chmod +x $_Ink/list > /dev/null 2>&1
-#[[ ! -e "$_Ink/list" ]] && {
-#echo -e "\n\033[1;31mKEY INVÁLID!\033[0m"
-#rm -rf $HOME/Plus > /dev/null 2>&1
-#sleep 2
-#clear; exit 1
-#}
-#}
+echo ""
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "WELCOME TO SSHPLUS MANAGER" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
@@ -155,6 +144,6 @@ rm -rf $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
 else
 echo -e "${red}Permintaan Ditolak!${NC}";
 echo "Hanya untuk pengguna terdaftar"
-rm -f Plus
+rm -rf $HOME/Plus > /dev/null 2>&1
 cd
 fi
