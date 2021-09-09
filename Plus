@@ -27,7 +27,7 @@ echo ""
 echo -e "\033[1;31m==================\033[0m"
 echo -e "\033[1;31mPermission Denied!\033[0m"
 echo -e "\033[1;31m==================\033[0m"
-sleep 2
+sleep 1
 echo ""
 echo "Please Contact Admin"
 echo "Telegram: t.me/RocknetStore"
