@@ -4,7 +4,7 @@
 import socket, threading, thread, select, signal, sys, time
 from os import system
 system("clear")
-#connection
+#conexao
 IP = '0.0.0.0'
 try:
    PORT = int(sys.argv[1])
@@ -13,7 +13,7 @@ except:
 PASS = ''
 BUFLEN = 8196 * 8
 TIMEOUT = 60
-MSG = 'SSHPLUS'
+MSG = 'DARKSSH'
 DEFAULT_HOST = '0.0.0.0:1194'
 RESPONSE = "HTTP/1.1 200 " + str(MSG) + "\r\n\r\n"
 
@@ -90,7 +90,7 @@ class ConnectionHandler(threading.Thread):
         self.client = socClient
         self.client_buffer = ''
         self.server = server
-        self.log = 'Connection: ' + str(addr)
+        self.log = 'Conexao: ' + str(addr)
 
     def close(self):
         try:
@@ -227,14 +227,14 @@ def main(host=IP, port=PORT):
     print "\033[0;34m━"*8,"\033[1;32m PROXY SOCKS","\033[0;34m━"*8,"\n"
     print "\033[1;33mIP:\033[1;32m " + IP
     print "\033[1;33mPORTA:\033[1;32m " + str(PORT) + "\n"
-    print "\033[0;34m━"*10,"\033[1;32m SSHPLUS","\033[0;34m━\033[1;37m"*11,"\n"
+    print "\033[0;34m━"*10,"\033[1;32m DARKSSH","\033[0;34m━\033[1;37m"*11,"\n"
     server = Server(IP, PORT)
     server.start()
     while True:
         try:
             time.sleep(2)
         except KeyboardInterrupt:
-            print '\nStopping...'
+            print '\nParando...'
             server.close()
             break
 if __name__ == '__main__':

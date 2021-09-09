@@ -1,13 +1,12 @@
 #!/bin/bash
 #====================================================
-#	SCRIPT: SSHPLUS MANAGER LIMITER
-#	DEVELOPED BY:	CRAZY_VPN
-# 	TRANSLATED BY: PHC_MARED08
-#	CONTACT TELEGRAM:	http://t.me/crazy_vpn
-#	TELEGRAM CHANNEL:	http://t.me/sshplus
+#	SCRIPT: LIMITER SSHPLUS MANAGER
+#	DESENVOLVIDO POR:	CRAZY_VPN
+#	CONTATO TELEGRAM:	http://t.me/crazy_vpn
+#	CANAL TELEGRAM:	http://t.me/sshplus
 #====================================================
 clear
-database="/root/users.db"
+database="/root/usuarios.db"
 fun_multilogin() {
 	(
 		while read user; do
@@ -34,7 +33,7 @@ fun_multilogin() {
 	) &
 }
 while true; do
-    echo 'verifying...'
+    echo 'verificando...'
 	fun_multilogin > /dev/null 2>&1
 	sleep 15s
 done
