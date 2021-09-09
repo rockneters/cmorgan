@@ -18,15 +18,15 @@ sleep 5
 MYIP=$(wget -qO- ifconfig.me/ip);
 IZIN=$( curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
-echo "e[0;32m======================\e[0m"
-echo "e[0;32mPermission Accepted...\e[0m"
-echo "e[0;32m======================\e[0m"
+echo -e "\033[1;31m======================\033[0m"
+echo -e "\033[1;31mPermission Accepted...\033[0m"
+echo -e "\033[1;31m======================\033[0m"
 else
 clear
 echo ""
-echo "\e[1;31m==================\e[0m"
-echo "\e[1;31mPermission Denied!\e[0m"
-echo -"\e[1;31m==================\e[0m"
+echo -e "\033[1;31m==================\033[0m"
+echo -e "\033[1;31mPermission Denied!\033[0m"
+echo -e "\033[1;31m==================\033[0m"
 sleep 3
 echo ""
 echo "Please Contact Admin"
