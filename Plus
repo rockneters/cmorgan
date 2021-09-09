@@ -9,18 +9,21 @@ fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
-fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
+
+fi
 MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS"
 IZIN=$(curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP)
-if [ $MYIP == $IZIN ]; then
-echo -e "${green}Permintaan Diterima...${NC}"
-else
+if [ $MYIP != $IZIN ]; then
 echo -e "${red}Permintaan Ditolak!${NC}";
 echo "Hanya untuk pengguna terdaftar"
+exit 0
+cd
+else
+echo -e "${green}Permintaan Diterima...${NC}"
 fi
 fun_bar () {
 comando[0]="$1"
