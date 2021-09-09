@@ -49,6 +49,8 @@ sleep 2
 IZIN=$(curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 clear
+clear
+echo ""
 echo -e "${green}Permintaan Diterima...${NC}"
 echo ""
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
