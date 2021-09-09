@@ -64,7 +64,7 @@ fi
 #echo -e "\n\033[1;31mKEY INVÁLID!\033[0m"
 #rm -rf $HOME/Plus > /dev/null 2>&1
 #sleep 2
-clear; exit 1
+#clear; exit 1
 #}
 #}
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
