@@ -16,10 +16,11 @@ IZIN=$( curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/da
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permintaan Diterima...${NC}"
 else
+clear
 echo -e "${red}Permintaan Ditolak!${NC}";
 echo "Hanya untuk pengguna terdaftar, hubungi @RocknetStore (Telegram)"
-exit 1
 cd $HOME
+rm Plus
 fi
 
 #[[ "$(whoami)" != "root" ]] && {
