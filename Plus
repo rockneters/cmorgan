@@ -157,18 +157,3 @@ echo ""
 echo -e "\033[1;31m \033[1;33mMAIN COMMAND: \033[1;32mmenu\033[0m"
 echo -e "\033[1;33m MORE INFORMATION \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@RocknetStore\033[0m"
 rm -rf $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
-
-else
-clear
-echo -e "\033[1;31m==================\033[0m"
-echo -e "\033[1;31mPermission Denied!\033[0m"
-echo -e "\033[1;31m==================\033[0m"
-sleep 1
-echo ""
-echo "Please Contact Admin"
-echo "Telegram: t.me/RocknetStore"
-echo ""
-rm -f Plus
-#exit 0
-cd
-fi
