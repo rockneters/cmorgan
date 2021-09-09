@@ -45,7 +45,7 @@ echo -e "\033[1;31m════════════════════�
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "WELCOME TO SSHPLUS MANAGER" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
-echo -e "             \033[1;31mATTENTION! \033[1;33mTHIS SCRIPT WILL!\033[0m"
+echo -e "\033[1;31mATTENTION! \033[1;33mTHIS SCRIPT WILL!\033[0m"
 echo ""
 echo -e "\033[1;31m• \033[1;33mINSTALLING A SCRIPT SET AS TOOLS\033[0m" 
 echo -e "\033[1;33m  FOR NETWORK, SYSTEM AND USER MANAGEMENT\033[0m"
@@ -72,7 +72,7 @@ echo ""
     clear
     echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
     echo ""
-	echo -e "                 \033[1;33m• \033[1;31mATTENTION \033[1;33m• \033[0m"
+	echo -e "\033[1;33m• \033[1;31mATTENTION \033[1;33m• \033[0m"
 	echo ""
     echo -e "\033[1;33mA Users Database\033[1;32m(users.db) \033[1;33mWas" 
     echo -e "Found! Do you want to keep it preserving the limit"
@@ -91,17 +91,17 @@ clear
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " WAIT FOR INSTALLATION" ; tput sgr0
 echo ""
 echo ""
-echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mUPDATING SYSTEM \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
+echo -e "\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mUPDATING SYSTEM \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
 echo ""
-echo -e "    \033[1;33mUPDATES USED TO TAKE A LITTLE TIME!\033[0m"
+echo -e "\033[1;33mUPDATES USED TO TAKE A LITTLE TIME!\033[0m"
 echo ""
 fun_attlist () {
-    apt-get update -y
+    apt update -y
 }
 fun_bar 'fun_attlist'
-clear
+#clear
 echo ""
-echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALLING PACKAGES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo -e "\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALLING PACKAGES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
 echo -e "\033[1;33mSOME PACKAGES ARE EXTREMELY BIG !\033[0m"
 echo ""
@@ -114,17 +114,17 @@ pip install speedtest-cli
 }
 fun_bar 'inst_pct'
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
-clear
+#clear
 echo ""
-echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINISHING \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo -e "\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINISHING \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "      \033[1;33mCOMPLETING FUNCTIONS AND DEFINITIONS! \033[0m"
+echo -e "\033[1;33mCOMPLETING FUNCTIONS AND DEFINITIONS! \033[0m"
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
 echo ""
 cd $HOME
-echo -e "        \033[1;33m • \033[1;32mINSTALLATION COMPLETED\033[1;33m • \033[0m"
+echo -e "\033[1;33m • \033[1;32mINSTALLATION COMPLETED\033[1;33m • \033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mMAIN COMMAND: \033[1;32mmenu\033[0m"
 echo -e "\033[1;33m MORE INFORMATION \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@SSHPLUS\033[0m"
