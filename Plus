@@ -16,7 +16,7 @@ NC='\e[0m'
 echo "Checking Permission..."
 sleep 5
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$(https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP)
+IZIN=$(grep -i $MYIP https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\033[1;31m======================\033[0m"
 echo -e "\033[1;31mPermission Accepted...\033[0m"
