@@ -24,7 +24,8 @@ exit 0
 cd
 else
 echo -e "${green}Permintaan Diterima...${NC}"
-fi
+sleep 5
+
 fun_bar () {
 comando[0]="$1"
 comando[1]="$2"
@@ -164,4 +165,5 @@ echo ""
 rm -f Plus
 #exit 0
 cd
+fi
 fi
