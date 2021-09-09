@@ -69,8 +69,8 @@ clear
 	done
 	screen -wipe >/dev/null
 	echo '#!/bin/bash
-#clear
-#INICIO AUTOMATICO' >/etc/autostart
+clear
+#AUTOMATIC START' >/etc/autostart
 	chmod +x /etc/autostart
 }
 crontab -r >/dev/null 2>&1
@@ -81,9 +81,8 @@ crontab -r >/dev/null 2>&1
 	echo "* * * * * /etc/autostart"
 	echo "0 */6 * * * /bin/uexpired"
 ) | crontab -
-echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/versao && cat /bin/versao >/home/sshplus
-wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 >/dev/null 2>&1
-chmod +x jq-linux64 && mv jq-linux64 $(which jq)
+echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/version && cat /bin/version >/home/sshplus
+wget https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 >/dev/null 2>&1 && chmod +x jq-linux64 && mv jq-linux64 $(which jq)
 service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
 [[ -d /var/www/html/openvpn ]] && service apache2 restart >/dev/null 2>&1
