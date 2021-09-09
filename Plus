@@ -21,10 +21,8 @@ if [ $MYIP = $IZIN ]; then
 echo -e "\033[1;31m======================\033[0m"
 echo -e "\033[1;31mPermission Accepted...\033[0m"
 echo -e "\033[1;31m======================\033[0m"
-sleep 2
 else
 clear
-echo ""
 echo -e "\033[1;31m==================\033[0m"
 echo -e "\033[1;31mPermission Denied!\033[0m"
 echo -e "\033[1;31m==================\033[0m"
@@ -34,7 +32,8 @@ echo "Please Contact Admin"
 echo "Telegram: t.me/RocknetStore"
 echo ""
 rm -f Plus
-exit 0
+#exit 0
+cd
 fi
 
 fun_bar () {
