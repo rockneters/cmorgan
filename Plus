@@ -15,8 +15,8 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
+IZIN=$(curl https://raw.githubusercontent.com/rockneters/cmorgan/main/System/daftarIP | grep $MYIP)
+if [ $MYIP == $IZIN ]; then
 echo -e "${green}Permintaan Diterima...${NC}"
 else
 echo -e "${red}Permintaan Ditolak!${NC}";
