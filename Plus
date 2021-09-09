@@ -22,7 +22,7 @@ echo -e "${green}Permission Accepted...${NC}"
 else
 clear
 echo ""
-echo -e "${red}Permission Denied!${NC}";
+echo -e "${red}Permission Denied!${NC}"
 sleep 3
 echo ""
 echo "Please Contact Admin"
