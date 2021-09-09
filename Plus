@@ -21,10 +21,12 @@ if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
 clear
+echo ""
 echo -e "${red}Permission Denied!${NC}";
+sleep 3
 echo ""
 echo "Please Contact Admin"
-echo -e "${red}Telegram t.me/RocknetStore${NC}";
+echo "Telegram t.me/RocknetStore"
 echo ""
 rm -f Plus
 exit 0
